@@ -2,7 +2,7 @@ import { Quote, QuoteProps } from '@app/entities/quote/quote';
 
 type Override = Partial<QuoteProps>;
 
-export function quoteFactory(override: Override = {}, id?: string) {
+export function quoteFactory(override: Override = {}, id?: number) {
   return new Quote(
     {
       quote: 'Test quote',

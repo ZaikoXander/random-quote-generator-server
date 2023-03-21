@@ -1,5 +1,3 @@
-import { randomUUID } from 'crypto';
-
 export interface QuoteProps {
   quote: string;
   media: string;
@@ -7,15 +5,15 @@ export interface QuoteProps {
 }
 
 export class Quote {
-  private _id: string;
+  private _id: number;
   private props: QuoteProps;
 
-  constructor(props: QuoteProps, id?: string) {
-    this._id = id ?? randomUUID();
+  constructor(props: QuoteProps, id?: number) {
+    this._id = id ?? undefined;
     this.props = props;
   }
 
-  public get id(): string {
+  public get id(): number {
     return this._id;
   }
 
